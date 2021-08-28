@@ -61,7 +61,7 @@ function setup() {
   bunny = createSprite(270,100,100,100);
   bunny.addImage(rabbit);
   bunny.scale = 0.2;
-  higherground =new Ground(300,170,100,10);
+//create a shelf
 
   bunny.addAnimation('blinking',blink);
   bunny.addAnimation('eating',eat);
@@ -100,17 +100,14 @@ function draw()
   pop();
 
   ground.show();
-  higherground.show();
+//display the shelf
+  
   rope.show();
   rope2.show();
 
   if(collide(fruit,bunny,80)==true)
   {
-   remove_rope();
-   bubble.visible = false;
-    World.remove(engine.world,fruit);
-    fruit = null;
-    bunny.changeAnimation('eating');
+  
   }
   
   if(collide(fruit,bubble,40) == true)
